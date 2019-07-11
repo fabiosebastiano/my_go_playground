@@ -4,7 +4,8 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	//	"youtube-stats/websocket"
+
+	"github.com/fabiosebastiano/my_go_playground/youtube-stats/websocket"
 )
 
 func init() {
@@ -19,17 +20,17 @@ func homePage(w http.ResponseWriter, r *http.Request) {
 
 //espone tutte le stats del canale via websocket
 func stats(w http.ResponseWriter, r *http.Request) {
-	/*
-		//per prima cosa chiamo Update function per modificare
-		//la connessione da HTTP a WEBSOCKET
-		ws, err := websocket.Upgrade(w, r)
-		if err != nil {
-			fmt.Fprintf(w, "%+v\n", err)
-		}
-		//ora posso chiamare funzione che polla ogni 5 secondi
-		//e poi scrive nella connessione websocket
-		go websocket.Writer(ws)
-	*/
+
+	//per prima cosa chiamo Update function per modificare
+	//la connessione da HTTP a WEBSOCKET
+	ws, err := websocket.Upgrade(w, r)
+	if err != nil {
+		fmt.Fprintf(w, "%+v\n", err)
+	}
+	//ora posso chiamare funzione che polla ogni 5 secondi
+	//e poi scrive nella connessione websocket
+	go websocket.Writer(ws)
+
 }
 
 func main() {
