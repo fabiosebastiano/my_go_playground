@@ -1,4 +1,4 @@
-module git-hub.com/fabiosebastiano/youtube-stats
+module github.com/fabiosebastiano/youtube-stats
 
 go 1.12
 
