@@ -9,7 +9,6 @@ import (
 	"time"
 
 	"github.com/fabiosebastiano/my_go_playground/youtube-stats/youtube"
-
 	"github.com/gorilla/websocket"
 )
 
