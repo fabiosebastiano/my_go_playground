@@ -23,9 +23,11 @@ func stats(w http.ResponseWriter, r *http.Request) {
 
 	//per prima cosa chiamo Update function per modificare
 	//la connessione da HTTP a WEBSOCKET
+	
 	ws, err := websocket.Upgrade(w, r)
 	if err != nil {
 		fmt.Fprintf(w, "%+v\n", err)
+		fmt.Println("ERRORE: ", err)
 	}
 	//ora posso chiamare funzione che polla ogni 5 secondi
 	//e poi scrive nella connessione websocket

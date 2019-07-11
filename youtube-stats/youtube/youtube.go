@@ -32,7 +32,6 @@ type Stats struct {
 //GetSubscribers recupera tutte le stats
 func GetSubscribers() (Items, error) {
 	var response Response
-
 	//nuova GET con query params
 	req, err := http.NewRequest("GET", "https://www.googleapis.com/youtube/v3/channels", nil)
 
