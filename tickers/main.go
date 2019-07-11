@@ -14,7 +14,7 @@ func backgroundfunc() {
 }
 
 func main() {
-	fmt.Println("- STARTING GO TICKERS TUTORIAL -")
+	fmt.Println("- STARTING GO TICKERS TUTORIAL-")
 
 	go backgroundfunc()
 
